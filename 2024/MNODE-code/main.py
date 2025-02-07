@@ -18,7 +18,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Configuration dictionary
 config = {
-    "test_case": "Slider_Crank",
+    "test_case": "Single_Mass_Spring",
     "generation_numerical_methods": "fe",
     "numerical_methods": "fe",
     "dt": 0.01,
@@ -30,7 +30,7 @@ config = {
     "step_delay": 2,
     "random_seed": 5,
     "if_symplectic": False,
-    "model_string": "PNODE",
+    "model_string": "Transformer",
 }
 def main(config):
     set_seed(config["random_seed"])

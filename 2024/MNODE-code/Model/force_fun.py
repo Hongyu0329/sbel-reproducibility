@@ -19,7 +19,7 @@ from utils import *
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("device is "+str(device))
-#
+
 def force_sms(bodys,model=None):
     mass=10
     #print("bodys shape is "+str(bodys.shape))

@@ -30,10 +30,13 @@ from torch.utils.data import TensorDataset, DataLoader
 import torch.nn as nn
 import scipy
 from utils import *
-from force_fun import *
-from Integrator import *
-from Data_generator import *
+from .force_fun import *
+from .Integrator import *
+from .Data_generator import *
 from sklearn.preprocessing import MinMaxScaler
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
